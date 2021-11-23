@@ -19,6 +19,26 @@ class Stack {
 			this.top -= 1;
 		}
 	}
+
+	peek() {
+		if (this.top === -1) {
+			console.log("stack is empty");
+		}
+		console.log(`${this.a[this.top]} is top element`);
+	}
+
+	isEmpty() {
+		if (this.top === -1) {
+			console.log("stack is empty");
+		}
+		console.log("stack is not empty");
+	}
+
+	print() {
+		for (let i = 0; i <= this.top; i++) {
+			console.log(this.a[i]);
+		}
+	}
 }
 
 const stack = new Stack();
@@ -29,6 +49,9 @@ stack.push(7);
 
 stack.pop();
 stack.pop();
-stack.pop();
-stack.pop();
-stack.pop();
+
+stack.peek();
+
+stack.isEmpty();
+
+stack.print();
