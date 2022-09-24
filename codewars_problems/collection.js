@@ -115,3 +115,32 @@ function longest(s1, s2) {
 
 	return uniqueString;
 }
+
+// Complete the solution so that it returns true if the first argument(string)
+// passed in ends with the 2nd argument(also a string).
+function solution(str, ending) {
+	let newStrArr = str.split(ending);
+	let arrLen = newStrArr.length;
+
+	return !newStrArr[arrLen - 1] || ending === "" ? true : false;
+
+	//----------- next solution-------------
+	// return str.endsWith(ending);
+}
+
+// Write a function that accepts an array of 10 integers (between 0 and 9),
+// that returns a string of those numbers in the form of a phone number.
+//Example: createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+function createPhoneNumber(numbers) {
+	let str = numbers.join("");
+	return `(${str.slice(0, 3)}) ${str.slice(3, 6)}-${str.slice(6)}`;
+
+	//-------------- next solution-----------------
+	// let phNum = "(xxx) xxx-xxxx";
+
+	// numbers.forEach((num) => {
+	// 	phNum = phNum.replace("x", num);
+	// });
+
+	// return phNum;
+}
