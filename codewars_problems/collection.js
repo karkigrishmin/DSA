@@ -144,3 +144,32 @@ function createPhoneNumber(numbers) {
 
 	// return phNum;
 }
+
+// Complete the solution so that the function will break up camel casing, using a space between words.
+// Example
+// "camelCasing"  =>  "camel Casing"
+// "identifier"   =>  "identifier"
+// ""             =>  ""
+function solution(string) {
+	let strArr = string.split("");
+	return strArr
+		.map((item, index) =>
+			item.toUpperCase() === strArr[index] ? ` ${item}` : item
+		)
+		.join("");
+
+	// -----------------next solution------------------------------
+	// return strArr.map(item => item.search(/^[A-Z]*$/) === 0 ? ` ${item}` : item).join('')
+}
+
+// A pangram is a sentence that contains every single letter of the alphabet
+// at least once.For example, the sentence "The quick brown fox jumps over the
+// lazy dog" is a pangram, because it uses the letters A - Z at least once(case is irrelevant).
+// Given a string, detect whether or not it is a pangram. Return True if it is,
+//  False if not.Ignore numbers and punctuation.
+function isPangram(string) {
+	//...
+	let letters = [..."abcdefghijklmnopqrstuvwxyz"];
+
+	return letters.every((letter) => string.toLowerCase().includes(letter));
+}
