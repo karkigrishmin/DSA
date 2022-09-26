@@ -203,3 +203,13 @@ function scramble(str1, str2) {
 		}
 	});
 }
+
+// Remove vowel from the string and return that string
+// removeVowel('eye') => 'y'
+// removeVowel('enthu') => 'nth'
+const removeVowel = (str) => {
+	const vowel = [..."aeiou"];
+	const strArr = str.split("");
+
+	return strArr.filter((char) => !vowel.includes(char.toLowerCase())).join("");
+};
