@@ -173,3 +173,33 @@ function isPangram(string) {
 
 	return letters.every((letter) => string.toLowerCase().includes(letter));
 }
+
+// Complete the function scramble(str1, str2) that returns true if a portion
+// of str1 characters can be rearranged to match str2, otherwise returns false
+// Examples
+// scramble('rkqodlw', 'world') ==> True
+// scramble('cedewaraaossoqqyt', 'codewars') ==> True
+// scramble('katas', 'steak') ==> False
+function scramble(str1, str2) {
+	//code me
+	let obj = {};
+	const str1Arr = str1.split("");
+	const str2Arr = str2.split("");
+
+	str1Arr.forEach((char) => {
+		if (obj[char]) {
+			obj[char] += 1;
+		} else {
+			obj[char] = 1;
+		}
+	});
+
+	return str2Arr.every((char) => {
+		if (!obj[char]) {
+			return false;
+		} else if (obj[char]) {
+			obj[char] -= 1;
+			return true;
+		}
+	});
+}
