@@ -213,3 +213,14 @@ const removeVowel = (str) => {
 
 	return strArr.filter((char) => !vowel.includes(char.toLowerCase())).join("");
 };
+
+// Write an algorithm that takes an array and moves all of the zeros to the end,
+// preserving the order of the other elements.
+// moveZeros([false,1,0,1,2,0,1,3,"a"]) returns[false,1,1,2,1,3,"a",0,0]
+function moveZeros(arr) {
+	let zeros = [];
+	let newArr = [];
+
+	arr.forEach((item) => (item !== 0 ? newArr.push(item) : zeros.push(item)));
+	return [...newArr, ...zeros];
+}
