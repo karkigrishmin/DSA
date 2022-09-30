@@ -224,3 +224,40 @@ function moveZeros(arr) {
 	arr.forEach((item) => (item !== 0 ? newArr.push(item) : zeros.push(item)));
 	return [...newArr, ...zeros];
 }
+
+/*
+The goal of this exercise is to convert a string to a 
+new string where each character in the new string is 
+"(" if that character appears only once in the original string,
+ or ")" if that character appears more than once in the 
+ original string. Ignore capitalization when determining if a 
+ character is a duplicate.
+Examples
+"din"      =>  "((("
+"recede"   =>  "()()()"
+"Success"  =>  ")())())"
+"(( @"     =>  "))((" 
+*/
+function duplicateEncode(word) {
+	let uppercaseWord = word.toUpperCase();
+	let charCountObj = {};
+	let newWord = "";
+
+	for (let i = 0; i < uppercaseWord.length; i++) {
+		if (!charCountObj[uppercaseWord[i]]) {
+			charCountObj[uppercaseWord[i]] = 1;
+		} else {
+			charCountObj[uppercaseWord[i]] = 2;
+		}
+	}
+
+	for (let i = 0; i < uppercaseWord.length; i++) {
+		if (charCountObj[uppercaseWord[i]] > 1) {
+			newWord += ")";
+		} else {
+			newWord += "(";
+		}
+	}
+
+	return newWord;
+}
