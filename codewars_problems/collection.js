@@ -294,3 +294,17 @@ const plus = (a) => (b) => b + a;
 const minus = (a) => (b) => b - a;
 const times = (a) => (b) => b * a;
 const dividedBy = (a) => (b) => Math.floor(b / a);
+
+// finding first repeated number from an array
+const arr = [1, 2, 3, 3, 4, 4, 5, 6];
+let firstRepeatedNumber = null;
+
+for (let i = 0, arrLen = arr.length; i < arrLen; i++) {
+	if (arr.indexOf(arr[i]) !== i) {
+		firstRepeatedNumber = arr[i];
+		console.log(arr[i]);
+		break;
+	}
+}
+
+console.log("firstRepeatedNumber: ", firstRepeatedNumber);
