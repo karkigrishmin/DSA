@@ -308,3 +308,29 @@ for (let i = 0, arrLen = arr.length; i < arrLen; i++) {
 }
 
 console.log("firstRepeatedNumber: ", firstRepeatedNumber);
+
+/*manipulate given array of obj and get this new object: 
+		{
+		  123: { id: 123, value: 'one' },
+		  234: { id: 234, value: 'two' }
+		}
+*/
+const newObj = {};
+const arrOfObj = [
+	{
+		id: 123,
+		value: "one",
+	},
+	{
+		id: 234,
+		value: "two",
+	},
+];
+
+for (let eachObj of arrOfObj) {
+	newObj[eachObj.id] = {
+		...eachObj,
+	};
+}
+
+console.log(newObj);
