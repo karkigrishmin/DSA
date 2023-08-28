@@ -7,6 +7,7 @@ func main() {
 	fmt.Println(MakeUpperCase("hello"))
 	fmt.Println(FakeBin("5347"))
 	fmt.Println(StringToArray("Hello World"))
+	fmt.Println(Contamination("abc", "z"))
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
