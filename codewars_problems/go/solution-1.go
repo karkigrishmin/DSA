@@ -12,7 +12,7 @@ func main() {
 	fmt.Println(DNAtoRNA("GCAT"))
 	fmt.Println(Greet("Grishmin"))
 	fmt.Println(AbbrevName("Grishmin Karki"))
-
+	fmt.Println(MyString("GRISH").IsUpperCase())
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
