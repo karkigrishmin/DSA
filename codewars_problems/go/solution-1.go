@@ -8,6 +8,7 @@ func main() {
 	fmt.Println(FakeBin("5347"))
 	fmt.Println(StringToArray("Hello World"))
 	fmt.Println(Contamination("abc", "z"))
+	fmt.Println(Points([]string{"1:0", "2:0", "3:0", "4:0", "2:1", "3:1", "4:1", "3:2", "4:2", "4:3"}))
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
