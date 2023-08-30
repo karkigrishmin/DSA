@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(MyString("GRISH").IsUpperCase())
 	fmt.Println(RepeatStr(2, "Hello"))
 	fmt.Println(ReverseString("hello"))
-
+	fmt.Println(ReverseWords("hello world"))
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
