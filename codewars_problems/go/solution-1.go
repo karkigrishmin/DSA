@@ -19,6 +19,7 @@ func main() {
 	fmt.Println(RemoveChar("hello world"))
 	fmt.Println(Feast("chickadee", "chocolate cake"))
 	fmt.Println(countSheep(4))
+	fmt.Println(NoSpace("hello world"))
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
