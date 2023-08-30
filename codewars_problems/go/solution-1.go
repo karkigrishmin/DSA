@@ -17,6 +17,8 @@ func main() {
 	fmt.Println(ReverseString("hello"))
 	fmt.Println(ReverseWords("hello world"))
 	fmt.Println(RemoveChar("hello world"))
+	fmt.Println(Feast("chickadee", "chocolate cake"))
+
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short,
